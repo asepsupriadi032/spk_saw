@@ -36,6 +36,7 @@ class Bobot extends Super
          * @parameter (nama_field_ditabel_ini, tabel_relasi, field_dari_tabel_relasinya)
          **/
         // $this->crud->set_relation('parent_menu', 'tjm_menu', 'nama_menu');
+        $this->crud->set_relation('id_periode', 'periode', 'periode');
 
         /** Upload **/
         // $this->crud->set_field_upload('nama_field_upload',$this->folder_upload);  
@@ -43,6 +44,8 @@ class Bobot extends Super
         /** Ubah Nama yang akan ditampilkan**/
         // $this->crud->display_as('nama','Nama Setelah di Edit')
         //     ->display_as('email','Email Setelah di Edit'); 
+
+        $this->crud->display_as('id_periode', 'Periode');
 
         /** Akhir Bagian GROCERY CRUD Edit Oleh User**/
         $data = array_merge($data, $this->generateBreadcumbs());
